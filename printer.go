@@ -11,7 +11,7 @@ import (
 //
 //  staffs map[string][]string // map[staff][period1, period2...]
 //  periods map[string][]string // map[period][staff1, staff2...]
-//  availableTimetableTemplatePositions map[string]string // positions to render in available timeable template
+//  availableTimetableTemplatePositions map[string]string // positions to render in available timetable template
 //  configurations map[string]interface{} // configuration map
 //
 func printavailableTimetable(
@@ -92,7 +92,7 @@ func printavailableTimetable(
 
 // To print the timetable.
 //  output map[string]map[int]string // map[period][0, 1, 2...][staff1, staff2...]
-//  timetableTemplatePositions map[string]string // positions to render in timeable template
+//  timetableTemplatePositions map[string]string // positions to render in timetable template
 //  configurations map[string]interface{} // configuration map
 //
 func printTimetable(

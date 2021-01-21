@@ -54,7 +54,7 @@ func getStaffNames(
 //  name string // name of the specified staff
 //  staffs map[string][]string // map[staff][period1, period2...]
 //  periods map[string][]string // map[period][staff1, staff2...]
-//  availableTimetableTemplatePositions map[string]string // positions to render in available timeable template
+//  availableTimetableTemplatePositions map[string]string // positions to render in available timetable template
 //  configurations map[string]interface{} // configuration map
 //
 func getStaffTimetable(

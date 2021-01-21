@@ -22,8 +22,8 @@ func main() {
 		staffs  = make(map[string][]string)       // map[staff][period1, period2...]
 		output  = make(map[string]map[int]string) // map[period][0, 1, 2...][staff1, staff2...]
 
-		timetableTemplatePositions          = make(map[string][]string) // positions to render in timeable template
-		availableTimetableTemplatePositions = make(map[string][]string) // positions to render in available timeable template
+		timetableTemplatePositions          = make(map[string][]string) // positions to render in timetable template
+		availableTimetableTemplatePositions = make(map[string][]string) // positions to render in available timetable template
 	)
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
@@ -77,7 +77,7 @@ func main() {
 
 		os.Mkdir(cachePath, os.ModePerm)
 
-		// To load available timeable template.
+		// To load available timetable template.
 
 		loadTemplate(
 			"available_timetable",
@@ -85,7 +85,7 @@ func main() {
 			configurations,
 		)
 
-		// To load timeable template.
+		// To load timetable template.
 
 		loadTemplate(
 			"timetable",
@@ -97,7 +97,7 @@ func main() {
 
 		// To load all staffs'timetable.
 
-		loadStaffsTimeable(
+		loadStaffstimetable(
 			staffs,
 			periods,
 			availableTimetableTemplatePositions,

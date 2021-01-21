@@ -159,10 +159,10 @@ func loadConfiguration(
 // To load all staffs'timetable.
 //  staffs map[string][]string // map[staff][period1, period2...]
 //  periods map[string][]string // map[period][staff1, staff2...]
-//  availableTimetableTemplatePositions map[string]string // positions to render in available timeable template
+//  availableTimetableTemplatePositions map[string]string // positions to render in available timetable template
 //  configurations map[string]interface{} // configuration map
 //
-func loadStaffsTimeable(
+func loadStaffstimetable(
 	staffs map[string][]string,
 	periods map[string][]string,
 	availableTimetableTemplatePositions map[string][]string,
@@ -228,7 +228,7 @@ func loadStaffsTimeable(
 // To load template for timetables.
 //
 //  templateName string // name of the template ("available_timetable" or "timetable")
-//  templatePositions map[string]string // positions to render in available timeable template
+//  templatePositions map[string]string // positions to render in available timetable template
 //  configurations map[string]interface{} // configuration map
 //
 func loadTemplate(
@@ -244,7 +244,11 @@ func loadTemplate(
 	// If any files have been modified in path to certain template file,
 	// compared the modified time of path to certain template file with the modified time of path to certain template cache file.
 
-	if getFileModTime(templatePath) > getFileModTime(templateCachePath) {
+	if getFileModTime(templatePath) > getFileModTime(templateCachePath) ||
+
+		// If the template cache doesn't exist...
+
+		getFileModTime(templateCachePath) == 0 {
 
 		os.Remove(filepath.Join(cachePath, "__"+templateName+".json"))
 

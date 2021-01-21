@@ -7,7 +7,7 @@
   "__cache_path": ".cache",
   "__template_path": "template",
   "__available_timetable_path": "available-timetable",
-  "__timetable_template_path": "template\\timeable-template.xlsx",
+  "__timetable_template_path": "template\\timetable-template.xlsx",
   "__available_timetable_template_path": "template\\available-timetable-template.xlsx",
   "__timetable_title": "Timetable",
   "__available_timetable_title": "Available-Timetable",

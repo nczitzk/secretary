@@ -1,0 +1,35 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+
+    strategy:
+      matrix:
+        go: [ '1.15', '1.14', '1.13' ]
+
+    name: Go ${{ matrix.go }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go }}
+
+      - name: Vet & Lint
+        run: |
+          go version
+          go get -u golang.org/x/lint/golint
+          go vet -v ./...
+          golint ./...
+
+      - name: Build
+        run: go build -v ./...
+
+      - name: Test
+        run: go test -v ./...

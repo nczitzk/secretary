@@ -22,6 +22,7 @@ archives:
       format: zip
 
     files:
+      - settings.json
       - README.md
       - LICENSE
       - available-timetable/*

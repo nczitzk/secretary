@@ -55,7 +55,7 @@ func loadDefaultConfiguration(
 	// When content in some cell in certain staff's available timetable is equal to  __available_tag,
 	// then the time period which the cell refers to is available to this staff.
 
-	configurations["__available_tag"] = "free"
+	configurations["__available_tag"] = "Free"
 
 	// Path to cache files such as __staffs.json
 
@@ -79,11 +79,11 @@ func loadDefaultConfiguration(
 
 	// Title of the timetable and {{__title}} in templates
 
-	configurations["__timetable_title"] = "timetable"
+	configurations["__timetable_title"] = "Timetable"
 
 	// Title of the available timetable and {{__title}} in templates
 
-	configurations["__available_timetable_title"] = "available-timetable"
+	configurations["__available_timetable_title"] = "Available-timetable"
 
 	// Try to assign staffs to different positions or not.
 	// e.g. If Ethan has been assigned to the first position of some assigned shift,

@@ -11,6 +11,8 @@
 
 Secretary 是一個智慧排班助理，其能夠由定制的 XLSX（Microsoft Office Excel 2007 Document）範本快速生成值班表。
 
+![double click](https://github.com/nczitzk/secretary/wiki/images/double-click.gif)
+
 ## 開始使用
 
 建議下載包含完整的示例的 [壓縮包](https://github.com/nczitzk/secretary/releases)，並運行可執行檔，查看生成的 XLSX 檔。或者你也可以 pull 源碼，自行編譯。

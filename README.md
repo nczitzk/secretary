@@ -12,6 +12,8 @@
 
 Secretary is an intelligent scheduling assistant who is able to generate duty rosters in a snap from customized XLSX (Microsoft Office Excel 2007 Document) templates.
 
+![double click](https://github.com/nczitzk/secretary/wiki/images/double-click.gif)
+
 ## Get Started
 
 It is recommended to download [the zip file](https://github.com/nczitzk/secretary/releases) containing the complete example and run the executable file to view the generated XLSX files. Or you can pull the source code and compile it yourself.

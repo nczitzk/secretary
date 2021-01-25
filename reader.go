@@ -17,7 +17,7 @@ func readPath(
 	path string,
 
 ) []string {
-	fileNames, err := filepath.Glob(filepath.Join(path, "*.xlsx"))
+	fileNames, err := filepath.Glob(filepath.Join(path, "*.xls*"))
 	if err != nil {
 		panic(err)
 	} else if len(fileNames) == 0 {
@@ -40,10 +40,9 @@ func getStaffNames(
 
 	for _, fileName := range fileNames {
 		fileNameSplit = strings.Split(string(fileName), string(os.PathSeparator))
-		staffNames = append(
-			staffNames,
-			strings.Replace(fileNameSplit[len(fileNameSplit)-1], ".xlsx", "", 1),
-		)
+		staffNameSplit := strings.Split(fileNameSplit[len(fileNameSplit)-1], ".")
+		staffName := strings.Join(staffNameSplit[:len(staffNameSplit)-1], "")
+		staffNames = append(staffNames, staffName)
 	}
 
 	return staffNames
